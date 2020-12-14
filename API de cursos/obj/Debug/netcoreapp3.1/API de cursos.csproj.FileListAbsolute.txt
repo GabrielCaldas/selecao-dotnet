@@ -1,0 +1,20 @@
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\API de cursos.exe
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\API de cursos.deps.json
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\API de cursos.runtimeconfig.json
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\API de cursos.runtimeconfig.dev.json
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\API de cursos.dll
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\bin\Debug\netcoreapp3.1\API de cursos.pdb
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.csprojAssemblyReference.cache
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.AssemblyInfoInputs.cache
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.AssemblyInfo.cs
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\staticwebassets\API de cursos.StaticWebAssets.Manifest.cache
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\staticwebassets\API de cursos.StaticWebAssets.xml
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\scopedcss\bundle\API de cursos.styles.css
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.RazorTargetAssemblyInfo.cache
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.dll
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.pdb
+C:\Users\Gabriel Caldas\Desktop\Teste Indra\API de cursos\obj\Debug\netcoreapp3.1\API de cursos.genruntimeconfig.cache
