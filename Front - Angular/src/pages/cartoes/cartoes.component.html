@@ -1,0 +1,217 @@
+<style>
+  :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+
+  .toolbar {
+    z-index: 2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      padding-top: 8px;
+      padding-left: 30px;
+      align-items: center;
+      background-color: #10343d;
+      color: white;
+      font-weight: 600;
+  }
+
+  .menu{
+    z-index: 2;
+    top: 68px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    background-color: #fafafa;
+    color: #1d4751;
+    height: 100%;
+    width: 15%;
+}
+.menu-new-cartao{
+    z-index: 2;
+    top: 68px;
+    right: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    background-color: #fafafa;
+    color: #1d4751;
+    height: 100%;
+    width: 15%;
+}
+
+  .body{
+      background-color: #ffffff;
+      position: absolute;
+      align-items: flex-end;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+  }
+
+  .img{
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+  }
+
+  .mid-div{
+    z-index: 0;
+        align-self: center;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 60%;
+      height: 100%;
+  }
+
+  .button{
+      cursor: pointer;
+      height: 40px;
+      padding-top: 8px;
+      margin-top: 3px;;
+      padding-bottom: 3px;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-align: center;
+      padding-left: 15px;
+      border-radius: 20px;
+      background-color: #1d4751;
+      color:  #e9fbff;
+  }
+  .button-selected{
+      cursor: pointer;
+      height: 40px;
+      padding-top: 8px;
+      margin-top: 3px;;
+      padding-bottom: 3px;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-align: center;
+      padding-left: 15px;
+      border-radius: 20px;
+      background-color: #ffb14a;
+      color:  #e9fbff;
+  }
+  
+  .text-input{
+        padding-left: 15px;
+        height: 30px;
+        border-radius: 20px;
+    }
+    .button-login{
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        padding-left: 15px;
+        border-radius: 20px;
+        background-color: #ffb14a;
+        color:  #e9fbff;
+    }
+    .button-register{
+        cursor: pointer;
+        height: 40px;
+        padding-top: 8px;
+        margin-top: 20px;;
+        padding-bottom: 3px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        padding-left: 15px;
+        border-radius: 20px;
+        background-color: #1d4751;
+        color:  #e9fbff;
+    }
+    .mat-progress-spinner{
+        margin-left: 10px;
+        margin-right: 10px;
+        stroke:#e9fbff;
+    }
+    .card {
+        margin-top: 40px;
+        max-width: 400px;
+    }
+    a {color:rgba(255, 255, 255, 0);} 
+    a:visited {color:rgba(255, 255, 255, 0);}
+    a:hover {color:rgba(255, 255, 255, 0);}
+    a:active {color:rgba(255, 255, 255, 0);}
+</style>
+
+<div class="body" >
+
+    <div class="toolbar" >
+        <h2 *ngIf="!loading">Bem vindo, {{user.name}}!</h2>
+      </div>
+      <div class="menu">
+  
+          <a style="margin-top: 40px;"  routerLink="/home">
+            <h2 class="button">Home</h2>
+          </a>
+          <a routerLink="/meuscursos">
+              <h2 class="button">Meus cursos</h2>
+          </a>
+          <a routerLink="/cartoes">
+              <h2 class="button-selected">Meus cartões</h2>
+          </a>
+  
+      </div>
+      <div class="menu-new-cartao">
+        <h1 style="margin-top: 50px;">Adicionar cartao</h1>
+        <h2 style="margin-top: 30px;">Número</h2>
+        <input class="text-input" type="number" placeholder="XXXX XXXX XXXX XXXX" (change)="onCardNuChangeText($event)"/>
+        <h2 style="margin-top: 30px;">Código de verificação</h2>
+        <input class="text-input" type="number" placeholder="XXX" (change)="onCardCVVChangeText($event)"/>
+        <div class="button-login" (click)="onRegisterClick()">
+
+            <h2 style="text-align: center; margin-top: 13px;cursor: pointer;">{{loading?'Registrando':'Registrar'}}</h2>
+            <mat-progress-spinner [diameter]="25" color="#e9fbff"  mode="indeterminate" *ngIf="loading"></mat-progress-spinner>
+
+        </div>
+  
+      </div>
+    <div class="mid-div">
+
+        <div *ngFor="let cartao of cartoes">
+            <mat-card class="card">
+                <mat-card-header>
+                  <mat-card-title>{{cartao.nuCartao}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>CVV: {{cartao.cdverificacao}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button (click)="onPagarMatriculaClick(cartao)">Pagar matrícula</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,126 @@
+<style>
+    :host {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 8px;
+        right: 0;
+        height: 60px;
+        display: flex;
+        padding-left: 30px;
+        align-items: center;
+        background-color: #10343d;
+        color: white;
+        font-weight: 600;
+    }
+
+    .body{
+        background-color: #1d4751;
+        position: absolute;
+        align-items: flex-end;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img{
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .enter-menu{
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        padding-left: 20px;
+        display: flex;
+        background-color: #e9fbff;
+        color: #1d4751;
+        height: 100%;
+        width: 20%;
+    }
+    .image-div{
+        flex: 1;
+    }
+
+    .text-input{
+        padding-left: 15px;
+        height: 30px;
+        border-radius: 20px;
+    }
+    .button-login{
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        padding-left: 15px;
+        border-radius: 20px;
+        background-color: #ffb14a;
+        color:  #e9fbff;
+    }
+    .button-register{
+        cursor: pointer;
+        height: 40px;
+        padding-top: 8px;
+        margin-top: 20px;;
+        padding-bottom: 3px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        padding-left: 15px;
+        border-radius: 20px;
+        background-color: #1d4751;
+        color:  #e9fbff;
+    }
+    .mat-progress-spinner{
+        margin-left: 10px;
+        margin-right: 10px;
+        stroke:#e9fbff;
+    }
+</style>
+
+<div class="toolbar" role="banner">
+    <h2>Bem vindo ao Cursos Online!</h2>
+</div>
+<div class="body" >
+
+    <div class="image-div">
+        <img class="img" src="assets/img/login-img.png">
+    </div>
+    <div class="enter-menu">
+        <h2 style="margin-top: 50px;">Login</h2>
+        <input class="text-input" type="email" placeholder="exemplo@email.com" (change)="onLoginChangeText($event)"/>
+        <h2 style="margin-top: 30px;">Senha</h2>
+        <input class="text-input" type="password" placeholder="*********" (change)="onPasswordChangeText($event)"/>
+        <div class="button-login" (click)="onLoginClick()">
+
+            <h2 style="text-align: center; margin-top: 13px;cursor: pointer;">{{loading?'Entrando':'Entrar'}}</h2>
+            <mat-progress-spinner [diameter]="25" color="#e9fbff"  mode="indeterminate" *ngIf="loading"></mat-progress-spinner>
+        </div>
+        <h2 class="button-register"  (click)="onRegisterClick()">Registrar</h2>
+
+    </div>
+
+</div>
